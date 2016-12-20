@@ -1,0 +1,32 @@
+*{margin:0;padding:0;}
+ul{list-style: none;}
+a{text-decoration: none;}
+.pane{background:#ccc}
+.card, .list-inset{border-radius:5px}
+#home .box img{width:100%;display: block;}
+#home .list .item{position:relative;border-radius:5px}
+#home .list .item .link{position:absolute;top:50%;right:0;margin-top:-10px;padding-right:10px;font-style: normal;font-family: simsun;}
+#home .pic i{width:32px;height:32px;background-size: 80%;background-repeat: no-repeat;margin-top:14px}
+#proceeds,#clear .padding-tblr{padding:15px 10px;}
+#proceeds .btn{background:#fff;text-align: center;padding:5px 0;margin:10px 0;border-radius: 5px;}
+#code .code-title{display: block;padding:10px}
+#code .code-item-p{color:#8f8f8f;}
+
+#add-att{}
+#add-att .list-inset{margin:20px 0;}
+#add-att #verification{padding:6px 0 5px 16px}
+#add-att #verification .button{font-size: 12px;line-height: 30px;min-height:30px}
+#add-att .basic_info,.close_info{display:inline-block;padding:5px 0 5px 9px;color: #777;margin:0;background:#ccc;}
+#add-att #province{position: static;padding:0;}
+#add-att .input-label{width:30%;}
+#add-att #register{margin:10px;}
+#add-att #register .button-full, .button-full > .button{border-radius: 4px;}
+
+.red{color: red!important;}
+.border-color-red{border: 1px solid red;}
+.orange{color: orange;}
+.border-color-orange{border: 1px solid orange;}
+
+#code .btn{font-size: 12px;text-align: center;width:100px;margin:0 auto;border-radius: 5px;}
+.box img{width:100%;display: block;}
+#know{top:0;}

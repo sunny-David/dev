@@ -1,0 +1,5 @@
+.about4_ch{font-size:18px;color:#888;margin:30px;border-bottom: 1px solid #ccc;padding:5px;}
+.about4_main{position:relative;padding-left:20px;overflow:hidden;}
+.line{width:2px;height:100%;background-color:#5cb85c;position:absolute;left:26px;}
+.about4_main ul li{padding-left:25px;font-size:14px;color:#333333;line-height:30px;margin-bottom:30px;background:url(../../images/ball.jpg) left center no-repeat;position:relative;z-index: 10;}
+.about4_main ul li:last-child{margin-bottom:0px;}
