@@ -3,25 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>Title</title>
+    <title>测试页面</title>
     <link href="lib/css/ionic.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/index.css" type="text/css">
     <script src="lib/js/ionic.bundle.js"></script>
-    <script src="js/jquery-3.1.0.js"></script>
-    <script src="js/app.js"></script>
-    <script src="views/home/home.js"></script>
-    <script src="views/progress/progress.js"></script>
-    <link rel="stylesheet" href="views/progress/progress.css" type="text/css">
-    <script src="views/add-att/add-att.js"></script>
 </head>
 <body>
-<!--导航栏-->
-<!--<ion-nav-bar class="bar-dark">-->
-    <!--<ion-nav-back-button>后退</ion-nav-back-button>-->
-<!--</ion-nav-bar>-->
-
-<!--导航视图-->
-<ion-nav-view></ion-nav-view>
-
+<div class="bar bar-header bar-dark">
+    <h1 class="title">收款信息</h1>
+</div>
+<div class="scroll-content has-header" ng-controller="actionsheetCtl">
+    <div class="button-bar padding-tblr">
+        <a class="button button-calm" ng-click="show()">时间</a>
+        <a class="button button-outline button-calm">类型</a>
+        <a class="button button-outline button-calm">结果</a>
+        <a class="button button-outline button-calm">二维码</a>
+    </div>
+    <div class="list card">
+        <div class="item">
+            <div class="name">好冷的天气<sub class="red" style="bottom:0;">(支付成功)</sub></div>
+            <div class="data">微信支付</div>
+            <span>2016-10-10 16:32:12</span>
+            <span class="badge badge-calm">1.00￥</span>
+            <span class="link">></span>
+        </div>
+        <div class="item">
+            <div class="name">好冷的天气<sub class="red" style="bottom:0;">(支付成功)</sub></div>
+            <div class="data">微信支付</div>
+            <span>2016-10-10 16:32:12</span>
+            <span class="badge badge-calm">1.00￥</span>
+            <span class="link">></span>
+        </div>
+        <div class="item">
+            <div class="name">好冷的天气<sub class="red" style="bottom:0;">(支付成功)</sub></div>
+            <div class="data">支付宝支付</div>
+            <span>2016-10-10 16:32:12</span>
+            <span class="badge badge-calm">1.00￥</span>
+            <span class="link">></span>
+        </div>
+<!--
+        <div class="item">
+            <input type="datetime-local" value = "2016-12-20T11:42:13">
+        </div>
+-->
+    </div>
+    <div class="btn">没有查询记录</div>
+    <lable class="list pop">
+        <div class="item item-input">
+            <span class="input-label">开始时间：</span>
+            <input type="datetime-local" value="2016-12-20T11:42:13">
+        </div>
+        <div class="item item-input">
+            <span class="input-label">结束时间：</span>
+            <input type="datetime-local" value="2016-12-20T11:42:13">
+        </div>
+        <div class="item btn">
+            <input type="submit" value="确定">
+        </div>
+        <div class="item btn">
+            <input type="button" value="取消">
+        </div>
+    </lable>
+</div>
 </body>
 </html>
+<script type="text/javascript">
+    var myapp=angular.module('myapp', ['ionic'])
+
+    myapp.controller( 'actionsheetCtl',function($scope){
+        $scope.colse=true;
+        $scope.show=function(){
+            var h=document.getElementsByClassName("scroll-content")[0].offsetHeight;
+            var w=document.body.clientWidth;
+            console.log(h)
+//                alert(document.getElementsByClassName("pop")[0].offsetHeight)
+            var pop=document.getElementsByClassName("pop")[0];
+            var h_h=pop.offsetHeight;
+            if($scope.colse){
+                pop.style.top=h-h_h+"px"
+                $scope.colse=false;
+            }else{
+                pop.style.top="100%";
+                $scope.colse=true;
+            };
+        };
+    })
+</script>
